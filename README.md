@@ -218,4 +218,5 @@ Easily configure foreign keys with dropdown selectors for tables, columns, and r
 
 ---
 
-Made with ❤️ by the Database Schema Designer Team
+Made with ❤️ by Hiremaze 
+Contact at admin@hiremaze.in/harsharchduke@gmail.com
