@@ -1,0 +1,225 @@
+{
+  "tables": [
+    {
+      "id": "table-1697123456789",
+      "name": "users",
+      "position": {
+        "x": 50,
+        "y": 50
+      },
+      "columns": [
+        {
+          "id": "col-1697123456790",
+          "name": "id",
+          "dataType": "INT",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456791",
+          "name": "email",
+          "dataType": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456792",
+          "name": "company_id",
+          "dataType": "INT",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isNullable": true,
+          "foreignKeyReference": {
+            "tableId": "table-1697123456793",
+            "tableName": "companies",
+            "columnId": "col-1697123456794",
+            "columnName": "id",
+            "relationshipType": "1:N"
+          }
+        }
+      ]
+    },
+    {
+      "id": "table-1697123456793",
+      "name": "companies",
+      "position": {
+        "x": 400,
+        "y": 50
+      },
+      "columns": [
+        {
+          "id": "col-1697123456794",
+          "name": "id",
+          "dataType": "INT",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456795",
+          "name": "name",
+          "dataType": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456796",
+          "name": "industry",
+          "dataType": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": true
+        }
+      ]
+    },
+    {
+      "id": "table-1697123456797",
+      "name": "projects",
+      "position": {
+        "x": 50,
+        "y": 400
+      },
+      "columns": [
+        {
+          "id": "col-1697123456798",
+          "name": "id",
+          "dataType": "INT",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456799",
+          "name": "title",
+          "dataType": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456800",
+          "name": "user_id",
+          "dataType": "INT",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isNullable": false,
+          "foreignKeyReference": {
+            "tableId": "table-1697123456789",
+            "tableName": "users",
+            "columnId": "col-1697123456790",
+            "columnName": "id",
+            "relationshipType": "1:N"
+          }
+        },
+        {
+          "id": "col-1697123456801",
+          "name": "company_id",
+          "dataType": "INT",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isNullable": true,
+          "foreignKeyReference": {
+            "tableId": "table-1697123456793",
+            "tableName": "companies",
+            "columnId": "col-1697123456794",
+            "columnName": "id",
+            "relationshipType": "1:N"
+          }
+        },
+        {
+          "id": "col-1697123456802",
+          "name": "created_at",
+          "dataType": "TIMESTAMP",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": false
+        }
+      ]
+    },
+    {
+      "id": "table-1697123456803",
+      "name": "user_roles",
+      "position": {
+        "x": 400,
+        "y": 400
+      },
+      "columns": [
+        {
+          "id": "col-1697123456804",
+          "name": "user_id",
+          "dataType": "INT",
+          "isPrimaryKey": true,
+          "isForeignKey": true,
+          "isNullable": false,
+          "foreignKeyReference": {
+            "tableId": "table-1697123456789",
+            "tableName": "users",
+            "columnId": "col-1697123456790",
+            "columnName": "id",
+            "relationshipType": "N:M"
+          }
+        },
+        {
+          "id": "col-1697123456805",
+          "name": "role_id",
+          "dataType": "INT",
+          "isPrimaryKey": true,
+          "isForeignKey": true,
+          "isNullable": false,
+          "foreignKeyReference": {
+            "tableId": "table-1697123456806",
+            "tableName": "roles",
+            "columnId": "col-1697123456807",
+            "columnName": "id",
+            "relationshipType": "N:M"
+          }
+        },
+        {
+          "id": "col-1697123456808",
+          "name": "assigned_at",
+          "dataType": "TIMESTAMP",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": false
+        }
+      ]
+    },
+    {
+      "id": "table-1697123456806",
+      "name": "roles",
+      "position": {
+        "x": 750,
+        "y": 400
+      },
+      "columns": [
+        {
+          "id": "col-1697123456807",
+          "name": "id",
+          "dataType": "INT",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456809",
+          "name": "name",
+          "dataType": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": false
+        },
+        {
+          "id": "col-1697123456810",
+          "name": "permissions",
+          "dataType": "JSON",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isNullable": true
+        }
+      ]
+    }
+  ]
+}
