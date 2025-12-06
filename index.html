@@ -1,10 +1,183 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Character Encoding and Viewport -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Browser Schema Designer</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Database Schema Designer | Visual ERD Tool | Free Online</title>
+    <meta name="title" content="Database Schema Designer | Visual ERD Tool | Free Online">
+    <meta name="description" content="Design and visualize database schemas with an interactive drag-and-drop interface. Support for 1:1, 1:N, and N:M relationships. Auto-save to browser, export as Markdown. No installation required.">
+    <meta name="keywords" content="database schema, ERD, entity relationship diagram, database designer, visual database tool, database modeling, SQL design, schema visualization, drag-and-drop, TypeScript, React">
+    <meta name="author" content="Hiremaze">
+    <meta name="creator" content="Hiremaze">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="color-scheme" content="light dark">
+    
+    <!-- Search Engine Verification (Optional - add your specific verification codes) -->
+    <meta name="google-site-verification" content="">
+    <meta name="msvalidate.01" content="">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hiremaze-in.github.io/database-designer/">
+    <meta property="og:title" content="Database Schema Designer | Visual ERD Tool">
+    <meta property="og:description" content="Design database schemas visually with drag-and-drop interface. Support for multiple relationship types, auto-save, and Markdown export.">
+    <meta property="og:image" content="https://hiremaze-in.github.io/database-designer/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Database Schema Designer">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://hiremaze-in.github.io/database-designer/">
+    <meta name="twitter:title" content="Database Schema Designer | Visual ERD Tool">
+    <meta name="twitter:description" content="Design database schemas visually with drag-and-drop interface. Support for multiple relationship types, auto-save, and Markdown export.">
+    <meta name="twitter:image" content="https://hiremaze-in.github.io/database-designer/og-image.png">
+    <meta name="twitter:creator" content="@hiremaze">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hiremaze-in.github.io/database-designer/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/vite.svg">
+    
+    <!-- Preconnect and DNS-Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Database Schema Designer",
+      "description": "A modern, interactive database schema designer built with React, TypeScript, and Tailwind CSS. Design and visualize your database relationships with an intuitive drag-and-drop interface.",
+      "url": "https://hiremaze-in.github.io/database-designer/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Hiremaze",
+        "url": "https://hiremaze.in",
+        "email": "admin@hiremaze.in"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Hiremaze",
+        "url": "https://hiremaze.in"
+      },
+      "datePublished": "2025-10-18",
+      "dateModified": "2025-12-06",
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/MIT",
+      "codeRepository": "https://github.com/hiremaze-in/database-designer",
+      "programmingLanguage": ["TypeScript", "JavaScript", "HTML", "CSS"],
+      "featureList": [
+        "Visual Table Design with drag-and-drop interface",
+        "Column Management with multiple data types",
+        "Relationship Visualization",
+        "Support for 1:1, 1:N, and N:M relationships",
+        "Auto-Save to browser localStorage",
+        "Markdown Export",
+        "Interactive Canvas with pan and zoom",
+        "Real-time Updates"
+      ]
+    }
+    </script>
+    
+    <!-- Alternative JSON-LD for CreativeWork -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Database Schema Designer",
+      "description": "An interactive tool for designing and visualizing database schemas",
+      "url": "https://hiremaze-in.github.io/database-designer/",
+      "image": "https://hiremaze-in.github.io/database-designer/og-image.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Hiremaze"
+      },
+      "license": "https://opensource.org/licenses/MIT",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Hiremaze Tools",
+        "url": "https://hiremaze.in"
+      }
+    }
+    </script>
+    
+    <!-- BreadcrumbList Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hiremaze-in.github.io/database-designer/"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema (Optional) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Database Schema Designer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Database Schema Designer is a modern, interactive web-based tool for designing and visualizing database schemas with a drag-and-drop interface."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Database Schema Designer free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Database Schema Designer is completely free and open-source under the MIT License."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to install anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Database Schema Designer is a web-based application that runs directly in your browser. No installation required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data saved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, your schema is automatically saved to your browser's local storage. Your data remains private and is never sent to any server."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
